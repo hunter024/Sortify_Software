@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SORTIFY</title>
+    <link rel="stylesheet" href="style-v2.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <h1 class="logo">SORTIFY</h1>
+            <nav>
+                <!-- Hamburger Menu Icon -->
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                <ul class="nav-links">
+                    <li><a href="/grupper/D12-25/index.html">Home</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to Sortify</h2>
+        <p>Innovating for a better tomorrow.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 SORTIFY. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Menu Toggle -->
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('nav-active'); // Toggle menu on click
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var navLinks = document.querySelector('.nav-links');
+            var menuLinks = document.querySelectorAll('.nav-links a');
+
+            // Ensure menu starts hidden
+            navLinks.classList.remove('nav-active');
+
+            // Close menu when a link is clicked
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('nav-active');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
