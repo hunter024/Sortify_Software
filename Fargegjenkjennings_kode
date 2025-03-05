@@ -107,7 +107,7 @@ while True:
     detect_and_label(mask_green, "Green", frame, (0, 255, 0))
     detect_and_label(mask_blue, "Blue", frame, (255, 0, 0))
 
-    cv2.imshow("Original Frame", frame)
+    cv2.imshow("Main Frame", frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
